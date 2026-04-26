@@ -1,0 +1,87 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 48px;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brandText {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color 150ms ease;
+}
+
+.links a:hover {
+  color: var(--primary-600);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.signInBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 24px;
+  background: var(--primary-600);
+  color: #fff !important;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 200ms ease;
+}
+
+.signInBtn:hover {
+  background: var(--primary-700);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+  transform: translateY(-1px);
+}
+
+.authPrompt {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.signInLink {
+  font-weight: 700;
+  color: var(--text-primary) !important;
+  margin-left: 4px;
+}
+
+.signInLink:hover {
+  color: var(--primary-600) !important;
+}
+
+@media (max-width: 768px) {
+  .navbar { padding: 14px 20px; }
+  .links { display: none; }
+}

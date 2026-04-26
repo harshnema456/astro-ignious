@@ -1,0 +1,612 @@
+/* ====== HERO SECTION ====== */
+.hero {
+  display: flex;
+  align-items: stretch;
+  padding: 40px 48px 0;
+  min-height: 560px;
+  background: linear-gradient(135deg, #f0f0ff 0%, #e8ecff 30%, #f5f0ff 60%, #fff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  flex: 1;
+  padding: 40px 0 60px;
+  max-width: 480px;
+  z-index: 2;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--primary-100);
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #7c3aed;
+  margin-bottom: 24px;
+  backdrop-filter: blur(6px);
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.heroHighlight {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--primary-600);
+}
+
+.heroDesc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.heroBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: var(--primary-600);
+  color: #fff;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 250ms ease;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+}
+
+.heroBtn:hover {
+  background: var(--primary-700);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45);
+  transform: translateY(-2px);
+}
+
+.heroPrivacy {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Hero right side */
+.heroRight {
+  flex: 1.1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.heroImageWrap {
+  position: relative;
+  z-index: 1;
+}
+
+.heroImg {
+  width: 420px;
+  height: 520px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 24px 24px 0 0;
+}
+
+/* Welcome card overlay */
+.welcomeCard {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  max-width: 280px;
+  z-index: 3;
+}
+
+.welcomeThumb {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.welcomeThumbImg {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.playBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
+  background: var(--primary-600);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcomeTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.welcomeText {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Schedule card overlay */
+.scheduleCard {
+  position: absolute;
+  bottom: 40px;
+  right: -20px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  min-width: 320px;
+  z-index: 3;
+}
+
+.scheduleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.scheduleHeader h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.viewAllLink {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--primary-600) !important;
+}
+
+.scheduleDays {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.scheduleDay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.dayLabel {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.dayNum {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.scheduleDayActive {
+  background: var(--primary-600);
+}
+
+.scheduleDayActive .dayLabel,
+.scheduleDayActive .dayNum {
+  color: #fff;
+}
+
+.scheduleUpcoming {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  padding-top: 8px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* ====== TRUST BADGES ====== */
+.trustSection {
+  padding: 40px 48px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.trustGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.trustCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  transition: all 250ms ease;
+}
+
+.trustCard:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.trustImgWrap {
+  flex-shrink: 0;
+}
+
+.trustImg {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.trustTitle {
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.trustDesc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ====== FEATURES ====== */
+.featuresSection {
+  padding: 64px 48px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sectionHeader h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.dotIndicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.dotActive {
+  width: 24px;
+  height: 6px;
+  background: var(--primary-600);
+  border-radius: 3px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--gray-300);
+  border-radius: 50%;
+}
+
+.dotHeart {
+  display: flex;
+  align-items: center;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.featureCard {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: all 250ms ease;
+}
+
+.featureCard:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.featureImgWrap {
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.featureImg {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.featureTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.featureDesc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.featureLink {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary-600) !important;
+  transition: gap 200ms ease;
+}
+
+.featureLink:hover {
+  color: var(--primary-700) !important;
+}
+
+/* ====== TESTIMONIAL ====== */
+.testimonialSection {
+  padding: 20px 48px 64px;
+}
+
+.testimonialCard {
+  background: var(--gray-50);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 40px 48px;
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.testimonialQuote {
+  margin-bottom: 12px;
+}
+
+.testimonialText {
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonialAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonialAuthor strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.testimonialAuthor span {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+/* ====== HOW IT WORKS ====== */
+.howSection {
+  padding: 64px 48px;
+}
+
+.howTitle {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.howGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.howStep {
+  text-align: center;
+}
+
+.howImgWrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.howImg {
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.howNum {
+  position: absolute;
+  bottom: -8px;
+  left: -8px;
+  width: 28px;
+  height: 28px;
+  background: var(--primary-600);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #fff;
+}
+
+.howStepTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.howStepDesc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.howConnectors {
+  display: none; /* visual-only connector dots */
+}
+
+/* ====== CTA BANNER ====== */
+.ctaSection {
+  padding: 0 48px 64px;
+}
+
+.ctaBanner {
+  background: linear-gradient(135deg, #4338ca 0%, #6366f1 50%, #818cf8 100%);
+  border-radius: 24px;
+  padding: 48px 56px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaBanner::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+}
+
+.ctaBanner::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: 30%;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 50%;
+}
+
+.ctaIcon {
+  flex-shrink: 0;
+}
+
+.ctaContent {
+  flex: 1;
+}
+
+.ctaContent h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.ctaContent p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: #fff;
+  color: #e11d48;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 250ms ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 1100px) {
+  .hero { padding: 32px 24px 0; flex-direction: column; }
+  .heroContent { max-width: 100%; padding-bottom: 24px; }
+  .heroRight { min-height: 400px; }
+  .heroImg { width: 320px; height: 400px; }
+  .scheduleCard { right: 0; min-width: 260px; }
+  .trustGrid { grid-template-columns: repeat(2, 1fr); }
+  .featuresGrid { grid-template-columns: repeat(2, 1fr); }
+  .ctaBanner { flex-direction: column; text-align: center; padding: 40px 32px; }
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 24px 16px 0; }
+  .heroTitle { font-size: 2.2rem; }
+  .trustGrid { grid-template-columns: 1fr; }
+  .featuresGrid { grid-template-columns: 1fr; }
+  .howGrid { grid-template-columns: 1fr; gap: 24px; }
+  .featuresSection, .testimonialSection, .howSection, .ctaSection, .trustSection {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .welcomeCard { display: none; }
+  .scheduleCard { display: none; }
+}
